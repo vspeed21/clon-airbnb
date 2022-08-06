@@ -1,0 +1,22 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.lugares{
+
+  &__grid{
+    @include m.scrollX(4, 30rem, 4rem);
+
+    @include m.tablet {
+      @include m.grid(2, 2rem);
+      overflow-x: hidden;
+    }
+    @include m.desktop {
+      @include m.grid(4, 2rem);
+      overflow-x: hidden;
+    }
+  }
+}
+
+.lugar{
+  scroll-snap-align: center;
+}
